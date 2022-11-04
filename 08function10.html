@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 
+     객체 생성자 함수
+</title>
+<script>
+ //es5이전 class가 없음
+//생성자 함수 es6
+function CheckWeight(name,height,weight){// 생성자 함수(매개변수3개)
+//this: 해당 객체 생성자를 통하여 만든 객체를 가리킨다
+this.userName=name;//this 로 명시
+this.userHeight=height;
+this.userWeight=weight;
+this.minWeight;
+this.maxWeight;
+this.getInfo=function(){//내부 함수
+    var str="";
+    str+="이름 "+this.userName+", ";
+    str+="키 "+this.userHeight+", ";
+    str+="몸무게 "+this.userWeight+"<br> ";
+    return str;
+};
+this.setName=function(userName){
+    this.userName=userName;
+}
+
+this.getResult=function(){//내부함수
+    this.minWeight=(this.userHeight-100)*0.9-5;
+    this.maxWeight=(this.userHeight-100)*0.9+5;
+
+    if(this.userWeight >=this.minWeight && this.userWeight<=this.minWeight){
+        return "정상 몸무게입니다";
+    }else if(this.userWeight<this.minWeight){
+        return "정상몸무게보다 미달입니다.";
+    }else{
+        return"정상몸무게보다 초과입니다.";
+    }
+};
+}
+
+var jang=new CheckWeight("장보리",168,62);
+//생성자 함수 객체 생성 새로 메모리 할당
+var park= new CheckWeight("박달재",180,88);
+//생성자 함수 객체 생성 새로 메모리 할당
+console.log(jang);//콘솔창에서 max min값을 미리 계산해서 보여줌 ,자동줄바꿈
+console.log(park);
+jang.setName('둘리');
+document.write(jang.getInfo());
+document.write(jang.getResult(),"<br>");
+document.write(park.getInfo());
+document.write(park.getResult(),"<br>");
+//max min 호출하려면 해당 함수 호출 후 호출해야 나옴, 자동줄바꿈되지않음
+document.write(jang.getResult===park.getResult);
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

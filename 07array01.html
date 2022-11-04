@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 
+    array
+</title>
+
+</head>
+<body>
+<h1>배열(array)이란</h1>
+<pre>
+이름(배열명)과 인덱스로 참조되는 정렬된 값의 집합
+-배열값: 배열 요소(element)
+-배열에서의 위치: 인덱스(index)
+*0부터 시작
+-배열요소의 자료형이 달라도 된다
+-배열 요소의 인덱스가 연속적이지 않아도 되며,
+특정 배열 요소가 비어 있을 수도 있다
+-자바스크립트의 배열은 Array 객체로 다뤄진다
+
+*형식
+1. var arr= [배열요소1, 배열요소2,...];
+//배열 리터럴을 이용
+
+2.var arr= Array(배열요소1, 배열요소2,...);
+//Array 객체 생성자 이용 (빈 값 불가)
+
+3. var arr= new Arrray(배열요소1, 배열요소2,...);
+//new 연산자 이용 Array 객체 생성
+
+</pre>
+
+<script>
+
+    var arrLit=[1, true, ,"JavaScript"];
+    //빈 값 가능
+    var arrObj=Array(1, true,null,"JavaScript");
+    //빈 값도 반드시 기재
+    var arrNewObj= new Array(1, true, "JavaScript");
+
+/*
+
+    forEach() 형식
+        빈요소 , , 는 공간은 있지만 순회하지 않음
+        Array 객체로 생성한 null값은 순회 함
+    -item : 해당 배열객체의 요소값을 가져오는 변수
+    -idx : 해당 배열의 인덱스값을 가져오는 변수
+    배열 객체명.forEach(function(item,idx){
+        실행문;
+        ...
+    });
+    
+*/
+
+arrLit.forEach(function (item,idx){
+    console.log(idx+'/ '+item);
+});
+
+arrObj.forEach(function (item,idx){
+    console.log(idx+'/ '+item);
+});
+
+document.write(arrLit+"<br>");
+document.write(arrObj+"<br>");
+document.write(arrNewObj+"<br>");
+
+document.write(arrLit.length+"<br>");
+document.write(arrObj.length+"<br>");
+document.write(arrNewObj.length+"<br>");
+
+</script>
+
+
+</body>
+</html>

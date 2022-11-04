@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+
+    </title>
+    <script>
+
+        window.onload = function () {
+            //html 엘리먼트에 이벤트 핸들러 지정
+            //onClikc 속성 및 연결될 test()함수 지정하기
+            document.getElementById("btn").onclick = test;//클릭시
+
+            //onchange: 해당 select 요소에 onchange 속성 및 연결될 test2()함수 지정
+            document.getElementById("sel").onchange = function () {//변경시
+                test2(this.value);
+            };
+        };
+        function test() {
+            alert("사용자 정의함수");
+        }
+        function test2(email) {
+            //html특정 엘리먼트 객체로 접근
+            var text = document.getElementById("email2");
+            //특정 객체의 value 속성에 값을 지정
+            text.value = email;
+        }
+    </script>
+</head>
+
+<body>
+    <p><input type="button" value="test" id="btn"></p>
+    <p>이메일: <input type="text" id="email1">@ <input type="text" id="email2">
+
+    <select id="sel">
+        <option value="">직접입력
+        </option>
+        <option value="naver.com">네이버</option>
+        <option value="gmail.com">구글</option>
+        <option value="daum.net">다음</option>
+    </select>    </p>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 
+     object 자료형
+</title>
+
+</head>
+<body>
+<h2>js functions</h2>
+<p>
+    버튼 클릭
+</p>
+<p id="demo"></p>
+<button onclick="person.fullName()">클릭</button>
+
+<script>
+// Object객체의 값으로 존재하는 함수
+// this 키워드 함수의 소유자를 의미
+// 이 스크립트에서는 this가 person객체가 됨
+const person={
+    firstName: "John",
+    lastName: "Doe",
+    id:5566,
+    fullName: function(){
+        document.getElementById('demo').innerHTML=this.firstName+" "+this.lastName;
+    }
+
+};
+
+</script>
+</body>
+</html>

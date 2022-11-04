@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 
+    check 박스 체크여부 확인 
+</title>
+<script>
+function CheckForm(){
+    //체크박스 체크여부 확인[하나]
+    var chk1=document.frmJoin.U_checkAgreement1.checked;
+    //document문서안에 name이 frmJoin 안에 U_checkAgreement1 이 체크 되있는가? 
+    var chk2=document.frmJoin.U_checkAgreement2.checked;
+
+    if(!chk1){//체크 되어 있지 않으면
+        alert("약관1에 동의해 주세요");
+        return false;
+    }
+    if(!chk2){
+        alert('약관2에 동의해 주세요');
+        return false;
+    }
+    //체크박스 체크여부 확인 [동일 이름을 가진 체크박스 
+    //여러개일 경우]
+    var isSeasonChk=false;
+    var arr_Season=document.getElementsByName("SEASON");
+    //name이 SEASON을 가진 요소들 집합
+    for(var i=0; i<arr_Season.length; i++){
+        if(arr_Season[i].checked==true){
+            isSeasonChk=true;
+            break;
+        }
+    }
+    if(!isSeasonChk){
+        alert('계절의 종류를 한개 이상 선택해주세요');
+        return false;
+    }
+}
+
+
+</script>
+</head>
+<body>
+
+<form name="frmJoin" onsubmit="return CheckForm()">
+    <!-- true값 반환하므로 false값을 줘야 액션을 멈출수 있음 -->
+    <!-- 이벤트핸들러함수 onsubmit 전송버튼 실행전 메소드 실행해서 리턴값을 받음 -->
+    <label>
+<input type="checkbox" name="U_checkAgreement1" id="U_checkAgreement1">약관동의
+</label>
+<label>
+<input type="checkbox" name="U_checkAgreement2" id="U_checkAgreement2">약관동의
+</label><br><br>
+<input type="checkbox" id="spring" name="SEASON" value="1">봄
+<input type="checkbox" id="summer" name="SEASON" value="2">여름
+<input type="checkbox" id="fall" name="SEASON" value="3">가을
+<input type="checkbox" id="winter" name="SEASON" value="4">겨울
+<br><br>
+<input type="submit" value="전송">
+
+</form>
+</body>
+</html>
