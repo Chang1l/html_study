@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 
+논리연산자    
+</title>
+<script>
+
+var a=10,b=20,m=30,n=40;
+
+// ||연산자 : 조건중 하나가 참이면 참
+
+//&&연산자 : 조건 모두 다 참이어야만 참
+var result;
+result=a>b ||b >= m || m>n;
+//10>20 f  20>=30 f 30>40 f    f
+document.write(result,"<br>");
+result=a>b ||b <= m || b>=m;
+//10>20 f 20<=30 t 20>=40 f   t
+document.write(result,"<br>");
+result=a <= b && b >= m && m<=n;
+//10<=20 t 20>=30 f 30<=40 t   f
+document.write(result,"<br>");
+result=a<=b &&b <= m && m<=n;
+//10<=20 t 20<=30 t 30<=40 t   t 
+document.write(result,"<br>");
+
+result=!(a>b);
+//!10>20 t
+document.write(result);
+
+
+</script>
+
+</head>
+<body>
+
+
+</body>
+</html>

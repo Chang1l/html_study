@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 
+    제목
+</title>
+<script>
+    var today= new Date();//date 자료형 객체 생성
+    //getMonth(): 0~11 month-1 리턴됨
+    var mon=today.getMonth()+1;
+    var week=['일','월','화','수','목','금','토'];
+    //getDay : 0~6 일~토 가져오는 함수
+    var day= week[today.getDay()];
+
+    document.write(today.getFullYear()+"년 "+mon+"월 "+today.getDate()+"일 "+day+"요일");
+    //getFullYear 년도 4자리 
+
+</script>
+
+</head>
+<body>
+
+
+</body>
+</html>
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 
+    변수 선언 및 사용
+</title>
+<script>
+alert("자바스크립트의\n 줄바꿈");
+//var 예약어 사용
+
+/*
+undefined 는 변수를 선언하고 값을 할당하지 않은상태,
+null은 변수를 선언하고 빈 값을 할당한 상태(빈 객체)이다
+즉 undefined는 자료형이 없는 상태이다
+
+*/
+    box;
+    //밑에 선언된 var가 있으면 전역변수라 끌어옴(호이스팅) 
+    //var 재선언 ,재할당 가능하기 때문에 ( let 사용 권장)
+    document.write (box,"<br>");
+    //변수를 선언하고 값을 할당하지 않은상태
+    var box=''; //문자열 자료형 값
+    document.write(box,"<br>");
+   
+    var box=null;//null 
+    document.write(box,"<br>");//null 출력
+
+    var box=30;//number 자료형으로 인식
+    document.write(box,"<br>");
+
+    var box= "재선언 가능"; //문자열 자료형
+    document.write(box+"<br>");
+
+    //a= true;
+     //document.write(a,"<br");
+
+    //let 키워드는 호이스팅 불가능(먼저 선언이 되어야함)
+    //지역변수, 예약어 가능 ,재선언 불가
+
+    //let 예약어 사용
+    let a= true;
+    document.write(a,"<br>");
+
+    //let a= "재선언 불가";
+    a= "재할당 가능";
+    document.write(a,"<br>");
+
+    //const 예약어 사용
+    //상수, 변수 선언만 불가,재선언 불가
+    //선언만 하는것은 불가 (상수)
+    //const b;
+    const b="상수";
+    //const b="재선언 불가";
+    //b= "재할당 불가";
+    document.write(b,"<br>");
+    
+    
+    
+    </script>
+
+
+
+</head>
+<body>
+
+
+</body>
+</html>

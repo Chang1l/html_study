@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+       fieldset legend
+    </title>
+
+    <style>
+        ul {
+            list-style: none;
+        }
+
+        li {
+            margin: 20px;
+        }
+
+        li label {
+            width: 80%;
+            float: left;
+        }
+
+        fieldset {
+            margin: 15px;
+        }
+
+        fieldset legend {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+       <fieldset>
+        <legend>개인 정보</legend>
+      <ul>
+      <li>
+        <label for="name">이름</label>
+        <input type="text" name="id" id="name">
+      </li>
+      <li>
+        <label for="mail">메일 주소</label>
+        <input type="text" name="mail" id="mail">
+      </li>
+      </ul>
+       </fieldset>
+       <fieldset>
+        <ul>
+        <li>
+            <label for="id">아이디</label>
+            <input type="text" name="id" id="id">
+          </li>
+        <li>
+            <label for="pwd">비밀번호</label>
+            <input type="password" name="pwd" id="pwd">
+          </li>
+       
+    </ul>
+    </fieldset>
+    <input type="submit" value="전송">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 
+    변수 선언 및 사용
+</title>
+
+</head>
+<body>
+<h2> 변수 선언 및 사용</h2>
+<p>const 키워드는 지역의 의미가 있다</p>
+<p id="demo" style="border: 1px solid #000;"> </p>
+
+<script>      
+    const x=10;
+    document.write("전역x1 : "+x+"<br>");
+{   
+    const x=2; //지역에서 const 재선언 가능 (새로운 상수)
+    document.write("지역1 : "+x+"<br>");
+}   //소멸
+document.getElementById("demo").innerHTML=x;
+//id demo인 요소에 html형식으로 x의 값을 넣기
+document.write("전역x2 : "+x+"<br>");
+
+</script>
+
+</body>
+</html>

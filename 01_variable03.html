@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 
+    변수 선언 및 사용
+</title>
+
+</head>
+<body>
+<h2> 변수 선언 및 사용</h2>
+<p>let 키워드는 지역의 의미가 있다</p>
+<p id="demo" style="border: 1px solid #000;"> </p>
+
+<script>//소스코드는 위에서 부터 실행되서 헤드에 쓰면 인식 안됨
+        //헤드에 쓸거면 function 으로 호출 
+        //바디에 쓸거면 바디 마지막 부분에 기술
+    let x=10;
+    document.write("전역x1 : "+x+"<br>");
+{   //지역
+    let x=2; //지역변수 선언
+    document.write("지역1 : "+x+"<br>");
+}   //지역변수 소멸
+document.getElementById("demo").innerHTML=x;
+//id demo인 요소에 html형식으로 x의 값을 넣기
+document.write("전역x2 : "+x+"<br>");
+
+</script>
+
+</body>
+</html>

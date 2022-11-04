@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 
+    비교 연산자
+</title>
+<script>
+    var a=10; 
+    var b=20;
+    var c=10;
+    var f="20";
+    var result;
+    document.write("a: "+a+" ,b: "+b+", c: "+c+" ,f: "+f+"<br>");
+    result = a>b;
+    document.write("a>b: "+result+"<br>");
+
+    result = a<b;
+    document.write("a < b: "+result+"<br>");
+
+    result = a <= b;
+    document.write("a<=b: "+result+"<br>");
+
+    result =b==f;
+    //자바에서는 자료형까지 맞아야 true
+    //자바스크립트에서 동시연산자는 자료형이 달라도
+    //자료형을 변환해서 비교함 (일부 동치연산자) 동등연산자
+    document.write("b==f: "+result+"<br>");
+
+    result = a!=b;
+    document.write("a!=b: "+result+"<br>");
+
+
+
+</script>
+
+</head>
+<body>
+
+
+</body>
+</html>

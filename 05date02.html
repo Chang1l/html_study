@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 
+    Date 생성자 및 함수
+</title>
+
+<style>
+#demo{color: red;}
+
+</style>
+<script>
+    function spDate(){
+        var d=new Date(); d.setFullYear(2020); d.setMonth(9); d.setDate(1);
+        //month 세팅값에 따라 결과가 달라짐
+        var ddd=Date.now(); //밀리세컨드 초 단위로 계산
+        alert("ddd "+ddd);
+        var mon=d.getMonth()>=9 ? d.getMonth(): "0"+(d.getMonth());
+
+        var dd=d.getDate()>=9 ? d.getDate(): "0"+(d.getDate());
+        
+        var t=d.getHours()>=9 ? d.getHours(): "0"+(d.getHours());
+
+        var min=d.getMinutes()>9? d.getMinutes() :"0"+d.getMinutes();
+
+        var w=d.getDay();
+
+        var week=['일요일','월요일','화요일','수요일','목요일','금요일','토요일'];
+        var n=d.getFullYear()+"년"+mon+"월"+dd+"일"+t+":"+min+ " "+week[w];
+        document.getElementById('demo').innerHTML=n;
+
+
+    }
+
+
+
+</script>
+</head>
+<body>
+    <h2>Date의 set()함수</h2>
+<span  onclick="spDate()" style="color: blue;cursor:pointer;">
+    설정한 시간은?
+</span>
+<span id="demo"></span><br>
+
+</body>
+</html>

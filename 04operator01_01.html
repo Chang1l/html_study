@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 
+    산술 연산자
+</title>
+
+<script>
+    function pClick(){//함수 선언
+
+    let x=5;
+    let y=2;
+    let z=x+y;
+    return z;
+}
+
+    function yClick(){
+    let z=pClick();
+    alert(z);
+    document.getElementById("demo").innerHTML=z;
+    }
+</script>
+</head>
+<body>
+<h2>javascript operator</h2>
+<p>x=5,y=2 calculate z=x+y, and display z=<span id="demo"></span></p>
+<button onclick="yClick()">답확인</button>
+<!-- 함수호출 -->
+</body>
+</html>
