@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        selector
+    </title>
+
+    <style>
+        /*요소 선택자 1p */
+        p {
+            text-align: center;
+            color: gray;
+            font-size: 16pt;
+            font-weight: bolder;
+
+        }
+
+        /*아이디 선택자 100p 동급인경우 마지막 선택자*/
+
+        p#para1 {
+            text-align: left;
+            color: yellow;
+
+        }
+
+        #para1 {
+            text-align: center;
+            color: green;
+        }
+
+        #para1 {
+            text-align: right;
+            color: red;
+        }
+
+        /* 클래스명 선택자 10p*/
+        .para1 {
+
+            text-align: center;
+            color: blue;
+        }
+
+        /*선택자 우선순위*/
+
+        p#pid {
+            color: lightgreen;        }
+
+        #pid {
+            color: hotpink;        }
+
+        .pclass {
+            color: yellow;        }
+
+        .hclass {
+            color: rgb(255, 0, 157);        }
+
+        h1 {
+            color: rgb(217, 255, 0);
+            text-align: center;        }
+    </style>
+
+</head>
+
+<body style="background-color: black;">
+    <p>아무것도없는 p 태그</p>
+
+<p id="para1">id ="para1"</p>
+
+<p>아무것도없는 p 태그</p>
+<p class="para1"> class="para1"</p>
+<p class="para1"> class="para1"</p>
+<p class="para1"> class="para1"</p>
+<!--선택자 우선순위-->
+<!-- <p id="pid" class="pclass" >id="pid" class="para1"</p> -->
+
+<p id="pid" class="pclass" style=" color: red;">id="pid" class="pclass" 인라인 color:red</p>
+
+<h1 class="hclass">h1:  class="hclass"</h1>
+
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 
+    input
+</title>
+
+</head>
+<body>
+<h2>input elements</h2>
+
+<form action="20input02.html"method="get" autocomplete="on">
+   <!-- readonly 읽기 전용 -->
+<label for="userId">userId:</label><br>
+<input type="text" id="userId" name="userId" value="hgdong" readonly><br>
+<label for="pwd" >Password:</label><br>
+<input type="password" id="pwd" name="pwd" value="12345678" minlength="4" maxlength="8">
+<br>
+
+
+<!--disabled 비활성화 기능 브라우저 상에서 보임 서버로 값이 전송되지 않음
+maxlength 입력할 수 있는 최대 문자열 길이를 제한
+-->
+
+<label for="username">Username:</label><br>
+<input type="text" id="username" name="username"maxlength="3"><br>
+<label for="job">job:</label><br>
+<input type="text" id="job" name="job" value="학생" disabled><br>
+
+<!-- input type="color" 속성은 색상 포함해야하는 입력필드에서 사용 
+    익스플로러 11 사파리 9.1 이전 버전은 지원되지 않음
+-->
+<label for="likecolor" >Select your favorite color:</label>
+<input type="color" id="likecolor" name="likecolor">
+
+<!-- hidden 브라우저상에서 안보임 서버로 값이 전송됨-->
+<input type="hidden" id="hinput" name="hinput" value="숨긴 값">
+<!--size 문자 입력창이 보여지는 너비를 사이즈로 표현-->
+<label for="etcInfo">그외 정보:</label><br>
+<input type="text" id="etcInfo" name="etcInfo" size="10"><br><br>
+<input type="submit" value="가입하기">
+<input type="reset"><br><br>
+
+</form>
+
+</body>
+</html>

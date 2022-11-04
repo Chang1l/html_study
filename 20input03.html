@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 
+    
+</title>
+
+</head>
+<body>
+<form action="./img/cute_dog.jpg">
+<!--
+required 필수 입력 속성 
+checked 미리 선택을 해 놓는 속성 radio , checkbox
+-->
+
+
+<input type="radio" id="male" name="gender" value="male" required>
+<label for="male">Male</label><br>
+<input type="radio" id="female" name="gender" value="female" required>
+<label for="female">Female</label><br>
+<input type="radio" id="other" name="gender" value="other" required>
+<label for="other">Other</label><br>
+<hr>
+<label><input type="radio" id="red" name="colors" value="red" checked>
+    Red</label><br>
+<label><input type="radio" id="green" name="colors" value="green">
+    Green</label><br>
+<label><input type="radio" id="blue" name="colors" value="blue" >
+    Blue</label><br>
+
+<input type="checkbox" id="fruit1" name="fruit" value="Apple" required>
+<label for="fruit1">I have a Apple</label><br>
+<input type="checkbox" id="fruit2" name="fruit" value="Orange" required>
+<label for="fruit2">I have a Orange</label><br>
+<input type="checkbox" id="fruit3" name="fruit" value="Lemon" required>
+<label for="fruit3">I have a Lemon</label><br>
+<hr>
+<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" checked>
+<label for="vehicle1">I have a bike</label><br>
+<input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+<label for="vehicle2">I have a car</label><br>
+<input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+<label for="vehicle3">I have a boat</label><br>
+
+
+<!--
+input type="image": submit 버튼과 동일한 역할 버튼을 이미지로 설정 가능
+불필요한 마우스의 클릭 지점의 x,y 축 좌표값을 같이 붙여 보낸다. 
+input 요소에서 width height 의 독립 속성은 image 유형에서만 가능하다
+
+
+-->
+아래 이미지 클릭<br>
+<input type="image" src="./img/submit.png" style="border-radius: 5px;" alt="제출버튼" title="submit 버튼을 이미지로">
+
+</form>
+
+</body>
+</html>

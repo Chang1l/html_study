@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 
+    input
+</title>
+
+</head>
+<body>
+<h2>input elements</h2>
+
+<form action="20input01.html"method="post">
+    <label for="username">Username : </label>
+    <input type="text" id="username" name="username"><br>
+    <label for="pwd">password :</label>
+    <input type="password" id="pwd" name="pwd"><br>
+
+<label for="phone" >phone number:</label>
+<input type="tel" id="phone" name="phone" placeholder="010-1234-5678" pattern="[0-1]{2}[0]{1}-[0-9]{4}-[0-9]{4}">
+<br>
+<small style="color: red;">전화 번호 입력 예시 : 010-1234-5678</small>
+<br>
+
+<label for="email"> Email:</label>
+<label for="email" id="email" name="email" patttern="[a-zA-Z0-9_]+[@][a-zA-Z]+[.]+[a-zA-Z]+[.]*[a-zA-Z]*"><br>
+    
+<input type="email" id="email" name="email"><br>
+
+<label for="homepage">homepage:</label>
+<input type="url" id="homepage" name="homepage"><br>
+
+
+<input type="submit" value="가입하기">
+<input type="reset">
+</form>
+
+</body>
+</html>

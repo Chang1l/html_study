@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 
+    form 요소
+</title>
+<style>
+form{ border: 1px solid #000; padding: 5px;}
+
+</style>
+
+</head>
+<body>
+<h2>the form target att</h2>
+<p>when submitting this form, the result will be opend in a new browser tab:</p>
+
+<form action="01form.html" method="get">
+<!-- <form action="01form.html" method="post"> -->
+
+    <label for="firstname">First name:</label>
+<input type="text" id="firstname" name="firstname" value="홍"><br><br>
+<label>Last name: </label><input type="text" id="lastname" name="lastname" value="길동"><br><br>
+<label for="mname"> Middle name: </label>
+<input type="text" name="middlename" id="middlename" value="중간"><br><br>
+<label for="job">job: </label>
+<input type="text" id="job" name="job" value="학생"><br><br>
+
+<input type="submit" value="가입하기">
+</form><br>
+
+
+<input type="text" id="etcInfo" name="etcInfo" placeholder="정보 입력"><br><br>
+<label for="etcInfo">그외 정보 입력:</label>
+</body>
+</html>
