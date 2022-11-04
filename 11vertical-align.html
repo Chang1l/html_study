@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>vertical-align속성</title>
+<style>
+body{font-size: 30px;}
+span {
+    line-height:2em;
+    font-weight:bold;
+    color: red;
+}
+span.a {
+  vertical-align: baseline;
+}
+
+span.b {
+  vertical-align: text-top;
+}
+
+span.bb {
+  vertical-align: top;
+}
+
+span.m {
+  vertical-align:middle;
+}
+
+span.c {
+  vertical-align: text-bottom;
+  /* vertical-align: bottom; */
+}
+
+span.d {
+  vertical-align: sub;
+}
+
+span.e {
+  vertical-align: super;
+  
+}
+</style>
+</head>
+<body>
+
+<h1>The vertical-align Property</h1>
+<p>vertical-align은 오로지 inline과 table-cell 엘리먼트에만 적용된다.<br>
+  block level 엘리먼트에는 사용할 수 없다.</p>
+<h2>vertical-align: baseline (default):</h2>
+<p>셀의 baseline을 같은 행의 다른 cell들의 baseline과 동일하게 정렬합니다.</p>
+<p>A: An <span class="a">image IMAGE</span> with a default alignment.</p> 
+
+<h2>vertical-align: text-top:</h2>
+<p>B: An <span class="b">image IMAGE</span> image with a text-top alignment.</p> 
+
+<h2>vertical-align: top:</h2>
+<p>BB: An <span class="bb">image IMAGE</span> image with a top alignment.</p> 
+
+<h2>vertical-align: middle</h2>
+<p>M: An <span class="m">image IMAGE</span> with a default alignment.</p> 
+
+<h2>vertical-align: text-bottom:</h2>
+<p>C: An <span class="c">image IMAGE</span> image with a text-bottom alignment.</p>
+
+<h2>vertical-align: sub:</h2>
+<p>D: An <span class="d">image IMAGE</span> image with a sub alignment.</p> 
+
+<h2>vertical-align: super:</h2>
+<p>E: An <span class="e">image IMAGE</span>image with a super alignment.</p>
+
+</body>
+</html>

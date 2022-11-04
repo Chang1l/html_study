@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>location</title>
+		
+<script>
+	function pPage(){
+		document.getElementById("demo").innerHTML = 
+	"이 웹페이지의 url주소는: " + window.location.href;
+	//값으로 존재시 해당페이지 url  ,파일 통신이라 file:///이 붙음
+	}
+
+	function btn(val){
+		switch(val){
+			case 'n' : location.href = "https://www.naver.com"; break;
+			case 'd' : location.href = "https://www.daum.net"; break;
+			default : location.href = window.location.href; 
+			//변수에 위치시 a태그 href 기능
+		}
+	}
+
+</script>
+	
+	</head>
+<body>
+
+<h2>BOM</h2>
+<h3>window.location object</h3>
+<p id="demo"></p>
+<button onclick="pPage()">현재 페이지 url주소 반환</button><br><br>
+<button onclick="btn('n')">네이버로 이동</button>
+<button onclick="btn('d')">다음으로 이동</button>
+<button onclick="btn('a')">현재 페이지</button>
+
+</body>
+</html>

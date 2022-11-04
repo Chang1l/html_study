@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset = "UTF-8">
+<title>문자 객체를 이용한 예제</title>
+<script>
+	var condition = true;
+	while(condition){
+		var userEmail = prompt("당신의 이메일 주소는?", "");
+		var arrUrl = [".co.kr", ".com", ".net", ".or.kr", ".go.kr"];
+
+		var check1 = false;
+		var check2 = false;
+		if(userEmail ==null){//입력값이 없으면
+			alert("이메일을 입력하세요.");
+			continue;//건너뛰고 다시 반복
+		}
+	
+
+		if( userEmail.indexOf("@") > 0 ) { check1=true; }
+			//@위치가 0보다 크면 조건1 만족
+
+			if(userEmail.indexOf("@",userEmail.indexOf("@")+1)>0){//입력값이 없으면
+			alert("@기호는 1번만 입력하세요.");
+			continue;//건너뛰고 다시 반복
+		}
+
+		for(var i = 0; i < arrUrl.length; i++) {
+			if( userEmail.indexOf("@") <userEmail.indexOf(arrUrl[i]) && userEmail.indexOf(arrUrl[i]) > 0 ) {
+				check2 = true;
+				//@위치보다 arrUrl 값이 뒤에나오고, 
+				//배열안에 값의 인덱스가 0보다 뒤에 나오면 조건2 만족
+			} 
+		}
+
+		if( check1 && check2 ) {//두 조건 만족시
+			document.write( userEmail );//웹문서에 userEmail 값 출력
+			condition = false;//while문 종료
+		}else {
+			alert("이메일 형식이 잘못되었습니다.");
+		}
+	}
+</script>
+</head>
+<body>
+</body>
+</html>

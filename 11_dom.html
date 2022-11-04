@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 
+      document
+</title>
+
+</head>
+<body>
+<p id="intro"><a href="#">Hello World!</a></p>
+<p id="demo"></p>
+<p id="demo2"></p>
+
+<script>
+    var pid=document.getElementById("intro");
+    //id가 intro인 요소
+    document.getElementById('demo').innerHTML=pid.innerHTML;
+    //id가 demo인 요소안에 html형식으로 pid요소에서 html요소를 가져옴
+    document.getElementById('demo2').innerHTML=pid.innerText;
+    //id가 demo2인 요소안에 html형식으로 pid요소를 text요소를 가져옴
+    
+
+</script>
+</body>
+</html>
