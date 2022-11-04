@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+        em{font-size: 12px;
+        line-height: 60px;}
+    </style>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            // 체이닝 기법 : 한 객체에
+            // 다양한 메서드를 줄줄이 이어서 
+            // 사용하는 방법
+            // 아이디선택자
+            $("#tit").css("background-color","#0f0").css("border","2px solid #f00");
+            // 클래스 선택자
+            $(".tit").css("background-color","#ff0").css("border","2px dashed #f00");
+            //요소 선택자
+            $("h1").css("background-color","#0ff").css("border","2px dashed #f00");
+            //후손 선택자
+            $('div em').css('border','3px solid #f00').css('padding','7px 9px 11px 13px');
+            $('span em').css('border','1px dotted #0f0').css('padding','7px 10px');
+            $('span em').css({'border':'1px dotted #0f0','padding':'7px 10px'});
+            //json 방식 키:값 으로도 가능
+            
+            // 제이쿼리는 마지막거만 적용, 선택자 점수 처리 안함
+        });
+    </script>
+</head>
+<body>
+    <h1>h1 태그1</h1>
+    <h2 id="tit">아이디선택자</h2>
+    <h2 class="tit">클래스 선택자</h2>
+    <h1>h1 태그 2</h1>
+    <div><em>Hello!</em><em>jQuery</em><em>forever</em></div>
+    <span><em>Good Bye!</em><em>javascript</em></span>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="jquery/3.5.1/jquery.js"> </script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script type="text/javascript">
+
+        $(function () {
+            // children: 선택한 요소의 모든 자식 요소를 선택
+            $('#wrap h1').css({"background-color":"yellow"});
+            //wrap 아이디 안 h1 요소 css 변경
+            $('#wrap > section').children().css({
+            //wrap 안 section 의 자식요소들의 css 변경 
+                "color":"green",
+                'font-weight': 'bolder',
+                'border': '2px dashed #f00'
+
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+ <div id="wrap">
+    <h1>인접 관계 선택자</h1><p> 내용 1</p>
+    <section>
+        <h1>하위요소 선택자</h1>
+            <p>내용2</p>
+    </section>
+ </div>
+</body>
+
+</html>
