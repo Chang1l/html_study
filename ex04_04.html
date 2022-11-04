@@ -1,0 +1,63 @@
+<!DOCTYPE html><html><head>
+    <meta charset="UTF-8"><title>이벤트</title>
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <style>
+        #divBox{
+            width:300px;
+            border: 1px solid #555;
+            padding: 10px;
+        }
+    </style>
+
+    <script>
+    $(document).ready(function(){
+        
+        // 정적이벤트와 동적이벤트
+        // 정적이벤트: 이미 존재하는 엘리먼트에 이벤트를 등록하는 
+        // 방식
+        // 동적이벤트: 스크립트를 통해 생성된 엘리먼트에 이벤트를 등록하는 
+        // 방식
+        // (이벤트 상속 포함)
+        // click() 클릭이벤트 처리할때, 정적이벤트
+
+        $("button[name='btn']").click(function(){
+            // 속성선택자 클릭시 함수 실행
+            $("body").append("click!!<br>");
+        });
+        // 동적이벤트(라이브 이벤트) 등록방식
+        // $(선택자).on(이벤트속성, 지정자,콜백함수):
+        // on함수 이용
+        // 선택자를 해당 이벤트가 발생될 지정자보다 상위요소
+        // (부모, 조상요소들)을 선택자로 해야함
+
+        // 동적이벤트 (라이브이벤트) 등록 방식 이벤트 상속
+        // on = bind 여러개 함수 나열할때 사용
+        // bind 대신 on 사용 권장
+
+        //html 문서 안에 name add인 버튼 클릭 시 함수 실행
+        $(document).on("click","button[name='add']",function(){
+            // $("body").on("click","button [name='add']",function(){
+                $('#divBox').append("<button name='add'>+</button>");
+            // });
+        });
+        // 선택자와 지정자가 같을 경우 실행되지 않는다
+        // $("button[name='add']").on("click","button[name='add']",function(){
+        //     $('#divBox').append("<button name='add'>+</button>");
+        // });
+        // 동적이벤트 (라이브 이벤트 등록방식이 아님)이벤트로 상속되지 않는다
+
+        // $("button[name='add']").on("click",function(){
+            // $('#divBox').append("<button name='add'>+</button>");
+        // });
+
+    });
+
+    </script>
+    </head><body>
+      
+        <button name="btn">클릭</button>
+        <button name="add">+</button>
+        <div id="divBox"></div>
+
+
+    </body></html>

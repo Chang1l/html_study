@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>컨텐츠</title>
+    <style>
+    </style>
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+      $(function(){
+
+        $('h1').hover(function(){
+            //매개변수 2개 올렸을때, 나갔을떄
+            //매개변수 1개만 입력시 hover이벤트 발생 후 유지
+
+            //마우스 포인터가 선택 영역에 들어갔을 경우
+            $(this).css('color','red');
+
+        }, function(){
+            //마우스 포인터가 선택 영역에서 나갔을 경우
+            $(this).css('color','black');
+        });
+        
+   $('h1').on({
+    "mousedown":function(){
+        //마우스 눌렀을때 
+        $(this).css('color','red');
+
+    },
+    "mouseup":function(){
+        //마우스 떼었을때
+        $(this).css('color','black');
+    }
+
+   });
+        $('h2').on({
+            "mouseover":function(){
+                //마우스가 포인터 영역에 들어갔을 경우
+                $(this).css('color','hotpink');
+            },
+            "mouseleave":function(){
+                //마우스 포인터가 선택영역에서 나갔을 경우
+                $(this).css('color','black');
+
+            }
+        });
+      });
+    </script>
+</head>
+<body>
+    <h1>test</h1>
+    <h2>test</h2>
+</body>
+</html>

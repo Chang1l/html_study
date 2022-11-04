@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="UTF-8">
+        <title>탐색</title>
+        <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+     
+        <script>
+  
+            
+        function bFnc(){
+            
+            // prop("속성명"): js의 프로퍼티를 핸들링함
+            // prop("속성명")-프로퍼티는 js에서 사용하는 속성정보를 가져오므로
+            // html정보와 일치하기도 하고 일치 않을 수 있다
+            // prop("속성명","속성값") - 해당 요소의 속성 정보를
+            // 속성값으로 설정(변경)한다
+            var $goLink=$('#link');//변수명에 $가능
+            console.log($goLink.attr("href"));//기술된 값
+            console.log($goLink.prop('href'));//속성의 주소값
+        
+            var $goLink=$(".link");
+            console.log($goLink.attr("href")); //기술된 값
+            console.log($goLink.prop('href'));// 주소뒤에 /가 붙음
+
+            var $goLink=$("#amove");
+
+            $goLink.attr("href","http://www.google.com");
+
+            var $goLink=$(".amove");
+
+            $goLink.prop("href","#none");
+        }     
+            
+        </script>
+    </head> <body>
+   
+        <a href="#none" id="link">버튼1</a>
+        <a href="http://www.naver.com" class="link">버튼2</a>
+        <a href="#none" id="amove">이동1</a>
+        <a href="http://www.naver.com" class="amove">이동2</a>
+        <br><br>
+        <button onclick="bFnc()">적용하기</button>
+
+    </body>
+</html>

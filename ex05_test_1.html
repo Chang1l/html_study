@@ -1,0 +1,34 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+    <title>속성</title>
+    <style>
+        img { width: 280px; height: 280px; cursor: pointer;}
+        span{background-color: yellow;}
+    </style>
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(function() {
+            var iSize =280;
+         $("img").on("wheel",function(event){
+
+                var wheel=event.originalEvent.wheelDelta;
+            
+            if(wheel>0){
+                if(iSize>=1120) return false;
+                iSize=iSize+10;
+                $('img').css({'width':iSize+"px",'height':iSize+"px"});
+                console.log(iSize);
+            }else{
+                if(iSize<=140) return false;
+                iSize=iSize-10;
+                $('img').css({'width':iSize+"px",'height':iSize+"px"});
+                console.log(iSize);
+            }
+
+         })
+        });
+    </script></head><body>
+        <p>휠 위로 <mark>확대</mark>, 클릭 <mark>100%</mark>, 휠 아래로 : <mark>축소</mark></p>
+       <img src="./img/cute_dog.jpg">
+        
+    </body></html>
+    

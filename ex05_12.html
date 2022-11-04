@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title> 이벤트 </title>
+    <style>
+          *{ 
+        font:12pt "Malgun Ghothic",
+        "맑은 고딕","sans-serif";
+        /* 띄어쓰기 따옴표 묶음 */
+     }
+     body{ 
+        font:12pt "Malgun Ghothic",
+        "맑은 고딕","sans-serif";
+        /* 띄어쓰기 따옴표 묶음 */
+     }
+     .zBtn{font-size: 12pt;}
+    </style>
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(function () {
+            var fSize =14;
+            $(".zBtn .btn").on("click",zInout);
+
+            function zInout(){
+                if($(this).hasClass("zOut")){//클래스명 체크
+                    if(fSize<=8) return false;
+                    fSize--;
+                }else if($(this).hasClass("zIn")){
+
+                    if(fSize>=50) return false;
+                    fSize++;
+                }else{
+                    fSize=12;
+                }
+                $(".fontSize").text(fSize+"pt");
+
+                // 객체로 사용시 -(대시) 제거
+                // 카멜기법으로 표기
+                // css 속성명 그대로 사용하는 경우 
+                // 따옴표로 묶어줌
+                $('*').css({'font-size':fSize+"pt"});
+                // $('.btn').css({'font-size':fSize+"pt"});
+                // $('body').css({fontSize:fSize+"pt"});
+            }
+        });
+
+    </script>
+</head>
+<body>
+    <p class="zBtn">
+        <button class="btn zOut">-</button>    
+        <button class="btn originBtn">100%</button>
+        <button class="btn zIn">+</button>  
+    </p>
+    <p class="fontSize">12pt</p>
+    <div id="wrap">
+         Lorem ipsum dolor sit, amet consectetur adipisicing elit. In, neque, omnis hic nihil laudantium sapiente ducimus eos soluta animi molestias cum. Alias, eligendi explicabo! Aut quidem nisi assumenda quod cum.
+         
+        
+
+    </div>
+    <select>
+        <option>
+            1
+        </option>
+        <option>
+            1
+        </option>
+    </select>
+</body>
+
+</html>
