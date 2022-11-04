@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        회원가입 폼
+    </title>
+    <style>
+    
+    
+        input
+        {
+          
+            width: 468px;
+            height: 51px;
+            margin-top: 10px;
+            border: 1px solid #777;
+        }
+        #useryear{
+            width: 208px;
+            height: 51px;
+            margin-top: 10px;
+            border: 1px solid #777;
+        }
+       select{
+            width: 140px;
+            height: 55px;
+            margin-top: 10px;
+            border: 1px solid #777;
+        }
+        #userday{
+            width: 100px;
+            height: 51px;
+            margin-top: 10px;
+            border: 1px solid #777;
+        }
+        #gender{
+            width: 468px;
+            height: 51px;
+            margin-top: 10px;
+            border: 1px solid #777;
+
+        }
+        #submit{
+            width: 468px;
+            height: 51px;
+            margin: 20px;
+            border: 1px solid #777;
+            background-color: #48de48;
+            font-weight: bold;
+            
+        }
+        img{
+          
+            margin: 10px;
+        }
+        fieldset{
+            margin: 0 auto;
+            width: 300px;
+
+        }
+        form label{
+
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body >
+    <form >
+      <fieldset style="border: 0;">
+        <fieldset style="border: 0;">
+            <img src="./img/naver.png" width="268" height="51" >
+            <!-- <h1>회원가입</h1> -->
+         
+            </fieldset>
+            <fieldset style="border: 0; margin: 0 auto">
+            <label for="userid">아이디</label>
+            <br>
+            <input type="text" name="userid" id="userid" placeholder="@naver.com" required style="text-align: right;">
+
+            <br>
+            <label for="userpwd">비밀번호 </label>
+            <br>
+            <input type="password" name="userpwd" id="userpwd" required>
+
+            <br>
+            <label for="userpwdch">비밀번호 재확인 </label> <br>
+
+            <input type="password" name="userpwdch" id="userpwdch" required>
+
+            <br>
+            <label for="username">이름 <br> </label>
+
+            <input type="text" name="username" id="username" required>
+
+            <br>
+            <label for="useryead">생년월일 <br> </label>
+
+            <input type="text" name="useryear" id="useryear" size="4" pattern="[0-9]{4}" placeholder="년(4자)"
+                maxlength="4" required>
+
+
+            <select name="usermonth" required>
+                <option selected disabled>월</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+            </select>
+            <input type="text" name="userday" id="userday" placeholder="일" required pattern="[0-9]{1,2}" maxlength="2" size="2">
+            <br>
+            <label for="gender"> 성별 <br> </label>
+            <select name="gender" id="gender">
+                <option disabled selected> 성별</option>
+                <option>남자</option>
+                <option>여자</option>
+                <option>선택안함</option>
+            </select>
+
+            <br>
+
+            <label for="email"> 이메일 </label>
+            <br>
+            <input type="email" name="email" id="email" patttern="[a-zA-Z0-9_]+[@][a-zA-Z]+[.]+[a-zA-Z]+[.]*[a-zA-Z]*"
+                placeholder="선택입력">
+
+            <br>
+
+            <label for="phone"> 휴대전화</label>
+            <br>
+            <input type="tel" id="phone" name="phone" placeholder="전화번호 입력" pattern="(010)-[0-9]{4}-[0-9]{4}">
+        </fieldset>
+           
+            <fieldset style="border: 0;">
+            <input type="submit"  id="submit" value="가입하기" >
+        </fieldset>
+    </fieldset>
+    </form>
+
+</body>
+
+</html>

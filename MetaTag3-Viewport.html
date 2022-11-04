@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+<!-- name="viewport" : 웹 페이지의 뷰포트(보여지는 화면)를 설정하는 속성
+width=device-width : 기기에 따라 달라지는 장치의 화면 너비에 맞게 웹 페이지의 너비를 설정함. 요소의 너비가 아닌 장치의 브라우저 너비를 말함.
+initial-scale=1.0 : 브라우저에 의해 웹 페이지가 처음으로 로드될 때 초기(맨 처음) 화면의 확대/축소 레벨을 설정함.
+*initial-scal의 값은 0~1.0사이설정 가능. 제대로된 반응형을 원한다면 값은 1로 지정해준다.
+1은 해당 디바이스의 width크기를 100%인식하라는 의미로 원본 비율이 유지된다. (모바일 화면으로 해야 정확한 확인 가능)
+-->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>HTML meta tag - nonViewport</title>
+    <style>
+        body{padding:0; margin:0;}
+    </style>
+</head>
+<body>
+<p><b>To understand this example, you should open this page on a phone or a tablet.</b></p>
+<img src="./img/img_chania.jpg" alt="Chania" style="width:500px; height:250px;">
+<img src="./img/img_chania.jpg" alt="Chania" style="width:1500px; height:250px;">
+
+<img src="./img/img_chania.jpg" alt="Chania" style="width:500px; height:250px;max-width: 100%;">
+<img src="./img/img_chania.jpg" alt="Chania" style="width:1500px; height:250px;max-width: 100%;">
+
+<p>max-width속성은 최대사이즈를 제한하는 속성이다. 만약 지정사이즈를 넘어가면 해당 사이즈를 무효화시키고, max-width의 값으로 강제 설정된다. max-width속성은 단독으로 사용될 경우 디바이스 장치에 따라 적용이 제대로 되지 않을 수 있다. 제대로 된 반응형 효과를 원한다면 meta태그의 viewport속성을 설정한 후 같이 max-width를 적용할 경우 제대로된 반응형 효과를 얻을 수 있다.</p>
+<p>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+</p>
+
+</body>
+</html>

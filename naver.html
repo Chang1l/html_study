@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>naver회원가입페이지</title>
+    <style>
+        input {padding:0px;}
+        input, select {width:468px; height:51px;margin-top:10px;border: 1px solid #777;  }
+        legend {width:468px; text-align:center;}
+        label {font-weight:bold;}
+    </style>
+</head>
+<body>
+    <form>
+        <legend><a href="https://www.naver.com"><img src="./img/naverLogo.png" style="width:240px;height:44px;"></a></legend><br>
+        <label for="uid">아이디</label><br><input type="text" id="uid" name="uid" required><br><br>
+        <label for="upw">비밀번호</label><br><input type="password" id="upw" name="upw" required><br><br>
+        <label for="upwre">비밀번호 재확인</label><br><input type="password" id="upwre" name="upwre" required><br><br>
+        <label for="unm">이름</label><br><input type="text" id="unm" name="unm" required><br><br>
+        <label for="ubirth">생년월일</label><br><input type="date" id="ubirth" name="ubirth" min="1920-01-01" max="2002-08-08"><br><br>
+        <label for="uid">성별</label><br>
+        <select id="uid" name="uid">
+            <optgroup label="성별">
+                <option value="남자">남자</option>
+                <option value="여자">여자</option>
+                <option value="">선택안함</option>
+            </optgroup>
+        </select><br><br>
+        <label for="umail">본인 확인 이메일<small style="color:#777">(선택)</small></label><br><input type="text" id="umail" name="umail" required><br><br>
+        <label for="utelCountry">휴대전화</label><br>
+        <select id="utelCountry" name="utelCountry">
+            <option value="82">대한민국 +82</option>
+        </select><br>
+        <input type="tel" name="utel" pattern="(010)-[0-9]{4}-[0-9]{4}" required><br>
+        <input type="submit" value="가입하기" style="color:white;font-weight:bold;background-color:rgb(26, 187, 26)">
+    </form>
+</body>
+
+
+</html>

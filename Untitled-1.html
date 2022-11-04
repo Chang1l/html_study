@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 
+    
+</title>
+
+</head>
+<body>
+<form>
+    <!-- time은 오전 오후 시간으로 나뉘어 설정 가능 값은 24시간제로 표시-->
+    <label>시작 시간
+<input type="time" value="09:00" name="start1">
+</label>
+<label>종료 시간
+<input type="time" value="18:00" name="end1">
+</label>
+
+<!-- datetime yyyy-mm-dd 형식 다음에 시간을 의미하는 T 값이
+자동으로 붙음 뒤에 24시간제로 시간 표시
+-->
+
+<label>시작시간
+    <input type="datetime-local" min="2000-01-01T00:00" max="2050-12-31T23:59"
+value="2016-03-02T09:00" name="start2"></label>
+<label>종료시간
+    <input type="datetime-local" 
+value="2016-03-02T06:00" name="end2"></label>
+</form>
+
+</body>
+</html>
